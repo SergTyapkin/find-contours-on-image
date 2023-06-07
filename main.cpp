@@ -17,7 +17,7 @@ using namespace std;
   SPACE   - stop video on current frame (pause)
   S       - save image as JPG
   V       - save image as SVG (you can open it in browser)
-  f       - save contours to file (one line - one contour: <x1> <y1> <x2> <y2> ...)
+  F       - save contours to file (one line - one contour: <x1> <y1> <x2> <y2> <x3> <y3> ...)
 **/
 
 #define IMAGE_FILE_NAME       "images/test_0.jpg"

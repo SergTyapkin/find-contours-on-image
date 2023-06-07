@@ -10,7 +10,7 @@ using namespace std;
 #define PARITY NOPARITY
 #define BUFFER_SIZE 1024
 
-#define INPUT_TXT_FILENAME "MANIPULATOR_PATH.txt"
+#define INPUT_TXT_FILENAME "results/MANIPULATOR_PATH.txt"
 #define END_INPUT_SYMBOL "E"
 
 
@@ -88,6 +88,10 @@ int main() {
 
 //  // Читаем из файла построчно и закидываем в последовательный порт
 //  ifstream in(INPUT_TXT_FILENAME);
+//  if (!in.is_open()) {
+//    cout << "File not opened" << endl;
+//    exit(-1);
+//  }
 //  while (in.good()) {
 //    string line;
 //    getline(in, line);

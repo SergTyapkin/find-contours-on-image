@@ -8,8 +8,8 @@
 
 using namespace std;
 
-#define INPUT_TXT_FILENAME "RESULT.txt"
-#define OUTPUT_TXT_FILENAME "MANIPULATOR_PATH.txt"
+#define INPUT_TXT_FILENAME "results/RESULT.txt"
+#define OUTPUT_TXT_FILENAME "results/MANIPULATOR_PATH.txt"
 
 #define DESK_DISTANCE_X -20 // Отступ до центра доски по X. Доска перпендикулярна X
 #define DESK_MIN_Y -20 // Ограничения положения и размера доски
@@ -63,6 +63,10 @@ int main() {
     vector<vector<pair<int, int>>> contours;
 
     ifstream in(INPUT_TXT_FILENAME);
+    if (!in.is_open()) {
+      cout << "File not opened" << endl;
+      exit(-1);
+    }
 
     int minX, minY, maxX, maxY;
     bool firstValueGotten;
