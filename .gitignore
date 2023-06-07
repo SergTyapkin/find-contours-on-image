@@ -1,0 +1,11 @@
+*.exe
+*.o
+*.pdf
+.idea
+.git
+
+*.save
+*.txt
+*.svg
+
+results
