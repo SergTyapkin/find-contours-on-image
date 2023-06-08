@@ -20,7 +20,7 @@ using namespace std;
   F       - save contours to file (one line - one contour: <x1> <y1> <x2> <y2> <x3> <y3> ...)
 **/
 
-#define IMAGE_FILE_NAME       "images/test_0.jpg"
+#define IMAGE_FILE_NAME       "images/RK6.jpg"
 
 #define SETTINGS_WINDOW_NAME  "Tools"
 #define RESULT_IMAGE_FILENAME "results/RESULT.jpg"
@@ -109,8 +109,8 @@ int main() {
                 coloredImage = imread(IMAGE_FILE_NAME);
             #else
                 cap >> coloredImage;
+                flip(coloredImage, coloredImage, 1); // mirror vertical
             #endif
-            flip(coloredImage, coloredImage, 1); // mirror vertical
         }
 
         // --- Image change logic
